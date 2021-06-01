@@ -6,11 +6,19 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return SafeArea(
+    return Scaffold(
+      body: SafeArea(
+          child: Container(
+        height: size.height,
+        width: size.width,
+        color: Color(0xFF444444),
         child: Container(
-      height: size.height,
-      width: size.width,
-      color: Colors.purpleAccent,
-    ));
+          padding: EdgeInsets.fromLTRB(15, 30, 15, 20),
+          child: Column(
+            children: [Text("Wellcome")],
+          ),
+        ),
+      )),
+    );
   }
 }

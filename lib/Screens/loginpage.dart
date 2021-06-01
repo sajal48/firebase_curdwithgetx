@@ -13,9 +13,66 @@ class LoginPage extends StatelessWidget {
         width: size.width,
         color: Color(0xFF444444),
         child: Container(
-          padding: EdgeInsets.fromLTRB(15, 30, 15, 20),
+          margin: EdgeInsets.fromLTRB(25, 45, 25, 20),
           child: Column(
-            children: [Text("Wellcome")],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Welcome,",
+                style: TextStyle(
+                    letterSpacing: 9.38,
+                    fontSize: 48,
+                    fontWeight: FontWeight.w200,
+                    color: Color(0x99FFFFFF)),
+              ),
+              Text("Login to continue",
+                  style: TextStyle(
+                      letterSpacing: 9.38,
+                      fontSize: 34,
+                      fontWeight: FontWeight.w200,
+                      color: Color(0x99FFFFFF))),
+              SizedBox(
+                height: 5,
+              ),
+              Divider(
+                color: Color(0xFF707070),
+                thickness: 2,
+                height: 10,
+                indent: 0,
+                endIndent: 10.5,
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    labelText: "Username",
+                    focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Color(0xffbb86f6), width: 2),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x61FFFFFF),
+                      ),
+                    )),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Color(0xffbb86f6), width: 2),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x61FFFFFF),
+                      ),
+                    )),
+              )
+            ],
           ),
         ),
       )),

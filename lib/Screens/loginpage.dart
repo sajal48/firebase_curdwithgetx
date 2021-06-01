@@ -79,7 +79,50 @@ class LoginPage extends StatelessWidget {
                       borderSide: BorderSide(
                         color: Color(0x61FFFFFF),
                       ),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.visibility),
+                      onPressed: () {},
                     )),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Align(
+                child: Container(
+                  width: 100,
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      child: Center(
+                        child: Text("Login"),
+                      )),
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Align(
+                child: Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Dont have an account? ",
+                        style:
+                            TextStyle(fontSize: 15, color: Color(0x99FFFFFF)),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text("Sign up ",
+                            style: TextStyle(
+                                fontSize: 15, color: Color(0xffbb86f6))),
+                      ),
+                      Text("here",
+                          style:
+                              TextStyle(fontSize: 15, color: Color(0x99FFFFFF)))
+                    ],
+                  ),
+                ),
               )
             ],
           ),

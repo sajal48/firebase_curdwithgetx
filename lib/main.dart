@@ -3,7 +3,7 @@ import 'package:firebase_curdwithgetx/Screens/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
-void main() async {
+void main() {
   // WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp();
   runApp(MyApp());

@@ -5,6 +5,12 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    var size = MediaQuery.of(context).size;
+    return SafeArea(
+        child: Container(
+      height: size.height,
+      width: size.width,
+      color: Colors.purpleAccent,
+    ));
   }
 }

@@ -7,6 +7,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color(0xFF444444),
       body: SafeArea(
           child: Container(
         height: size.height,
@@ -27,7 +28,7 @@ class LoginPage extends StatelessWidget {
               ),
               Text("Login to continue",
                   style: TextStyle(
-                      letterSpacing: 9.38,
+                      letterSpacing: 5,
                       fontSize: 34,
                       fontWeight: FontWeight.w200,
                       color: Color(0x99FFFFFF))),
@@ -45,8 +46,11 @@ class LoginPage extends StatelessWidget {
                 height: 50,
               ),
               TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     labelText: "Username",
+                    labelStyle: TextStyle(color: Color(0xffbb86f6)),
                     focusedBorder: OutlineInputBorder(
                       borderSide:
                           BorderSide(color: Color(0xffbb86f6), width: 2),
@@ -61,7 +65,12 @@ class LoginPage extends StatelessWidget {
                 height: 20,
               ),
               TextFormField(
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
+                style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
+                    labelText: "Pasword",
+                    labelStyle: TextStyle(color: Color(0xffbb86f6)),
                     focusedBorder: OutlineInputBorder(
                       borderSide:
                           BorderSide(color: Color(0xffbb86f6), width: 2),

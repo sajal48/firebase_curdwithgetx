@@ -8,17 +8,20 @@ class LoginPage extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Color(0xFF444444),
-      body: SingleChildScrollView(
-        child: SafeArea(
-            child: Container(
-          height: size.height,
-          width: size.width,
-          color: Color(0xFF444444),
+      body: SafeArea(
           child: Container(
-            margin: EdgeInsets.fromLTRB(25, 40, 25, 20),
+        height: size.height,
+        width: size.width,
+        color: Color(0xFF444444),
+        child: Container(
+          margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 40,
+                ),
                 Text(
                   "Welcome,",
                   style: TextStyle(
@@ -33,17 +36,14 @@ class LoginPage extends StatelessWidget {
                         fontSize: 34,
                         fontWeight: FontWeight.w200,
                         color: Color(0x99FFFFFF))),
-                SizedBox(
-                  height: 5,
-                ),
                 Divider(
                   color: Color(0xFF707070),
                   thickness: 2,
-                  height: 6.5,
+                  height: 25,
                   endIndent: 91,
                 ),
                 SizedBox(
-                  height: 60,
+                  height: 65,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                       )),
                 ),
                 SizedBox(
-                  height: 60,
+                  height: 65,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
@@ -86,7 +86,7 @@ class LoginPage extends StatelessWidget {
                       )),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 65,
                 ),
                 Align(
                   child: Container(
@@ -102,30 +102,25 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 35,
+                  height: 65,
                 ),
-                Align(
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Dont have an account? ",
-                          style:
-                              TextStyle(fontSize: 15, color: Color(0x99FFFFFF)),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text("Sign up ",
-                              style: TextStyle(
-                                  fontSize: 15, color: Color(0xffbb86f6))),
-                        ),
-                        Text("here",
-                            style: TextStyle(
-                                fontSize: 15, color: Color(0x99FFFFFF))),
-                      ],
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Dont have an account? ",
+                      style: TextStyle(fontSize: 15, color: Color(0x99FFFFFF)),
                     ),
-                  ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Sign up ",
+                          style: TextStyle(
+                              fontSize: 15, color: Color(0xffbb86f6))),
+                    ),
+                    Text("here",
+                        style:
+                            TextStyle(fontSize: 15, color: Color(0x99FFFFFF))),
+                  ],
                 ),
                 Divider(
                   color: Color(0xFF707070),
@@ -137,8 +132,8 @@ class LoginPage extends StatelessWidget {
               ],
             ),
           ),
-        )),
-      ),
+        ),
+      )),
     );
   }
 }
